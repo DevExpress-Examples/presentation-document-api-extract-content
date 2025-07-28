@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Threading.Tasks" />
+    <Import Include="System.Threading" />
+    <Import Include="System.Net.Http" />
+    <Import Include="System.Linq" />
+    <Import Include="System.IO" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\Sample.pptx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Docs.Core" Version="25.1.4" />
+    <PackageReference Include="DevExpress.Docs.Presentation" Version="25.1.4" />
+    <PackageReference Include="DevExpress.Drawing" Version="25.1.4" />
+  </ItemGroup>
+
+</Project>
