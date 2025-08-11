@@ -1,4 +1,5 @@
-﻿using DevExpress.Docs.Presentation;
+using DevExpress.Docs;
+using DevExpress.Docs.Presentation;
 using DevExpress.Drawing;
 
 
