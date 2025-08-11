@@ -173,8 +173,13 @@ Namespace ExtractPresentationContent
 
 			Dim imageCount As Byte = 0
 			For Each pictureShape As PictureShape In sortedShapes
-				pictureShape.Image.Save("Slide2_Picture" & imageCount & ".png", DXImageFormat.Png)
-				imageCount += 1
+			If pictureShape.Image.Type = OfficeImageType.Image Then
+				Dim innerImage As OfficeImage = CType(pictureShape.Image, OfficeImage)
+				If innerImage IsNot Nothing Then
+					innerImage.DXImage.Save("Slide2_Picture" & imageCount & ".png", DXImageFormat.Png)
+					imageCount += 1
+				End If
+			End If
 			Next pictureShape
 
 		End Sub
@@ -188,8 +193,13 @@ Namespace ExtractPresentationContent
 
 				Dim imageCount As Byte = 0
 				For Each pictureShape As PictureShape In sortedShapes
-					pictureShape.Image.Save("Slide" & slideNumber & "_Picture" & imageCount & ".png", DXImageFormat.Png)
-					imageCount += 1
+				If pictureShape.Image.Type = OfficeImageType.Image Then
+					Dim innerImage As OfficeImage = CType(pictureShape.Image, OfficeImage)
+					If innerImage IsNot Nothing Then
+						innerImage.DXImage.Save("Slide" & slideNumber & "_Picture" & imageCount & ".png", DXImageFormat.Png)
+						imageCount += 1
+					End If										
+				End If
 				Next pictureShape
 				slideNumber += 1
 			Next slide
