@@ -1,4 +1,5 @@
-﻿Imports DevExpress.Docs.Presentation
+﻿Imports DevExpress.Docs
+Imports DevExpress.Docs.Presentation
 Imports DevExpress.Drawing
 
 
