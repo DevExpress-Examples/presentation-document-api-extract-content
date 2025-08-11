@@ -171,6 +171,7 @@ public class Program {
         }
         return notesText;
     }
+    
     public static void SaveSlidePictures(Presentation presentation, int slideNumber) {
         // Extract pictures from the second slide 
         #region Sort shapes
@@ -191,8 +192,8 @@ public class Program {
                 }
             }
         }
-
     }
+    
     public static void SaveSlidesPictures(Presentation presentation) {
         // Extract pictures from all slides
         int slideNumber = 0;
@@ -209,13 +210,14 @@ public class Program {
             foreach (PictureShape pictureShape in sortedShapes) {
                 if (pictureShape.Image.Type == OfficeImageType.Image) {
                 OfficeImage innerImage = (OfficeImage)pictureShape.Image;
-                if (innerImage != null)
-                {
-                    innerImage.DXImage.Save("Slide" + slideNumber + "_Picture" + imageCount + ".png", DXImageFormat.Png);
-                    imageCount++;
+                    if (innerImage != null)
+                    {
+                        innerImage.DXImage.Save("Slide" + slideNumber + "_Picture" + imageCount + ".png", DXImageFormat.Png);
+                        imageCount++;
+                    }
                 }
-            }
             slideNumber++;
+            }
         }
     }
 }
