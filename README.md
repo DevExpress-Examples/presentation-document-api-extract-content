@@ -32,7 +32,7 @@ This repository uses the following techniques to correctly obtain slide content:
 
 ## File to Review
 
-[Program.cs](./CS/Program.cs) ([Program.vb](./CS/Program.vb))
+[Program.cs](./CS/Program.cs) ([Program.vb](./VB/Program.vb))
 
 
 <!--## Documentation
