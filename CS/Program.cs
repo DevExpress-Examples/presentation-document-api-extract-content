@@ -182,8 +182,14 @@ public class Program {
 
         byte imageCount = 0;
         foreach (PictureShape pictureShape in sortedShapes) {
-            pictureShape.Image.Save("Slide2_Picture" + imageCount + ".png", DXImageFormat.Png);
-            imageCount++;
+            if (pictureShape.Image.Type == OfficeImageType.Image) {
+                OfficeImage innerImage = (OfficeImage)pictureShape.Image;
+                if (innerImage != null)
+                {
+                    innerImage.DXImage.Save("Slide2_Picture" + imageCount + ".png", DXImageFormat.Png);
+                    imageCount++;
+                }
+            }
         }
 
     }
@@ -201,8 +207,13 @@ public class Program {
 
             byte imageCount = 0;
             foreach (PictureShape pictureShape in sortedShapes) {
-                pictureShape.Image.Save("Slide" + slideNumber + "_Picture" + imageCount + ".png", DXImageFormat.Png);
-                imageCount++;
+                if (pictureShape.Image.Type == OfficeImageType.Image) {
+                OfficeImage innerImage = (OfficeImage)pictureShape.Image;
+                if (innerImage != null)
+                {
+                    innerImage.DXImage.Save("Slide" + slideNumber + "_Picture" + imageCount + ".png", DXImageFormat.Png);
+                    imageCount++;
+                }
             }
             slideNumber++;
         }
