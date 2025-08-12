@@ -35,9 +35,9 @@ This repository uses the following techniques to correctly obtain slide content:
 [Program.cs](./CS/Program.cs) ([Program.vb](./VB/Program.vb))
 
 
-<!--## Documentation
+## Documentation
 
-Refer to the following help topic for image/extraction results: [Extract Presentation Content](https://docs.devexpress.com/OfficeFileAPI/405430/presentation-api/extract-presentation-content).-->
+Refer to the following help topic for image/extraction results: [Extract Presentation Content](https://docs.devexpress.com/OfficeFileAPI/405430/presentation-api/extract-presentation-content).
 
 <!-- ## More Examples -->
 
@@ -48,3 +48,4 @@ Refer to the following help topic for image/extraction results: [Extract Present
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
