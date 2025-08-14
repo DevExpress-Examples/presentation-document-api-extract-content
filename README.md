@@ -24,11 +24,11 @@ This repository uses the following techniques to correctly obtain slide content:
 
 * You can identify and skip certain shape types. For example, the [Slide.Shapes](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Docs.Presentation.SlideBase.Shapes) collection includes a slide number placeholder shape. Use the [CommonShape.PlaceholderSettings.Type](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Docs.Presentation.PlaceholderSettings.Type) property to identify and skip this shape. 
 
-   **Code to review**: the **Sort shapes** region.
+   **Code to review**: the **Filter shapes** region.
 
 * You can obtain only shapes that contain text. Check that the [TextArea.Text](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Docs.Presentation.TextArea.Text) property is not an empty string.
 
-    **Code to review**: the **Sort shapes** region.
+    **Code to review**: the **Filter shapes** region.
 
 ## File to Review
 
@@ -48,4 +48,5 @@ Refer to the following help topic for image/extraction results: [Extract Present
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
 
